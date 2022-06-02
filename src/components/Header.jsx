@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import debounce from 'lodash.debounce';
 import FontSlider from './FontSlider';
 
@@ -31,7 +32,9 @@ const Header = () => {
 			ref={headerRef}
 			className={isHeaderScrolled ? 'rd-header rd-header--scrolled' : 'rd-header'}
 		>
-			<p className="rd-header__title">Responsive Design</p>
+			<Link to="/" className="rd-header__link">
+				<span className="rd-header__span">Responsive Design Units</span>
+			</Link>
 			<div className="rd-header__slider">
 				<FontSlider />
 			</div>

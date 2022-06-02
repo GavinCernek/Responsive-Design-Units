@@ -36,128 +36,6 @@ const Navigation = () => {
 			onTransitionEnd={handleTransitionEnd}
 		>
 			<nav className="rd-navigation__nav">
-				<ul ref={navigationListRef} className="rd-navigation__list">
-					<li className="rd-navigation__item">
-						<NavLink
-							to="/"
-							className={({ isActive }) =>
-								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
-							}
-						>
-							Home
-						</NavLink>
-					</li>
-					<li className="rd-navigation__item">
-						<NavLink
-							to="/test"
-							className={({ isActive }) =>
-								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
-							}
-						>
-							Test
-						</NavLink>
-					</li>
-					<li className="rd-navigation__item">
-						<NavLink
-							to="/"
-							className={({ isActive }) =>
-								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
-							}
-						>
-							Home
-						</NavLink>
-					</li>
-					<li className="rd-navigation__item">
-						<NavLink
-							to="/test"
-							className={({ isActive }) =>
-								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
-							}
-						>
-							Test
-						</NavLink>
-					</li>
-					<li className="rd-navigation__item">
-						<NavLink
-							to="/"
-							className={({ isActive }) =>
-								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
-							}
-						>
-							Home
-						</NavLink>
-					</li>
-					<li className="rd-navigation__item">
-						<NavLink
-							to="/test"
-							className={({ isActive }) =>
-								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
-							}
-						>
-							Test
-						</NavLink>
-					</li>
-					<li className="rd-navigation__item">
-						<NavLink
-							to="/"
-							className={({ isActive }) =>
-								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
-							}
-						>
-							Home
-						</NavLink>
-					</li>
-					<li className="rd-navigation__item">
-						<NavLink
-							to="/test"
-							className={({ isActive }) =>
-								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
-							}
-						>
-							Test
-						</NavLink>
-					</li>
-					<li className="rd-navigation__item">
-						<NavLink
-							to="/"
-							className={({ isActive }) =>
-								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
-							}
-						>
-							Home
-						</NavLink>
-					</li>
-					<li className="rd-navigation__item">
-						<NavLink
-							to="/test"
-							className={({ isActive }) =>
-								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
-							}
-						>
-							Test
-						</NavLink>
-					</li>
-					<li className="rd-navigation__item">
-						<NavLink
-							to="/"
-							className={({ isActive }) =>
-								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
-							}
-						>
-							Home
-						</NavLink>
-					</li>
-					<li className="rd-navigation__item">
-						<NavLink
-							to="/test"
-							className={({ isActive }) =>
-								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
-							}
-						>
-							Test
-						</NavLink>
-					</li>
-				</ul>
 				<button
 					type="button"
 					className={
@@ -173,6 +51,18 @@ const Navigation = () => {
 						<LeftChevronSVG />
 					</span>
 				</button>
+				<ul ref={navigationListRef} className="rd-navigation__list">
+					<li className="rd-navigation__item">
+						<NavLink
+							to="/test"
+							className={({ isActive }) =>
+								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
+							}
+						>
+							Test
+						</NavLink>
+					</li>
+				</ul>
 			</nav>
 		</div>
 	);
