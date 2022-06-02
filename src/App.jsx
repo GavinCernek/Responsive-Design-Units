@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
-import Test from './pages/Test';
+import TextSpacing from './pages/TextSpacing';
 
 const App = () => {
 	return (
@@ -11,7 +11,7 @@ const App = () => {
 			<div className="rd-content">
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/test" element={<Test />} />
+					<Route path="/text-spacing" element={<TextSpacing />} />
 				</Routes>
 			</div>
 		</Layout>

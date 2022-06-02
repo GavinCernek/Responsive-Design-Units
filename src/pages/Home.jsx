@@ -30,8 +30,16 @@ const Home = () => {
 					All text on the site will be in rem values since they are pretty much regarded as standard
 					practice for accessibility purposes.
 				</p>
+				<h2>Other Notes</h2>
+				<p>
+					This is not designed to be the de-facto way to approach any set of designs on the web, the
+					real answer always depends on your use case and what provides the best UX possible to your
+					end users. Rather, this is simply meant to be a nice and easy way to see patterns in
+					similar common designs with which you can use as a reference while building your own
+					products.
+				</p>
 				<p>And that's it!</p>
-				<Link to="/test" className="rd-cta">
+				<Link to="/text-spacing" className="rd-button">
 					Get Started
 				</Link>
 			</div>

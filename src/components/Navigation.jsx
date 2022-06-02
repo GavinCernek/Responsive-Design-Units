@@ -54,12 +54,12 @@ const Navigation = () => {
 				<ul ref={navigationListRef} className="rd-navigation__list">
 					<li className="rd-navigation__item">
 						<NavLink
-							to="/test"
+							to="/text-spacing"
 							className={({ isActive }) =>
 								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
 							}
 						>
-							Test
+							Text Spacing
 						</NavLink>
 					</li>
 				</ul>
