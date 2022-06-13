@@ -62,6 +62,16 @@ const Navigation = () => {
 							Text Spacing
 						</NavLink>
 					</li>
+					<li className="rd-navigation__item">
+						<NavLink
+							to="/image-sizing"
+							className={({ isActive }) =>
+								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
+							}
+						>
+							Image Sizing
+						</NavLink>
+					</li>
 				</ul>
 			</nav>
 		</div>

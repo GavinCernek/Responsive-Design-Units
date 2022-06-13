@@ -1,0 +1,29 @@
+@mixin sm {
+	@media only screen and (min-width: 36em) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media only screen and (min-width: 48em) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media only screen and (min-width: 62em) {
+		@content;
+	}
+}
+
+@mixin xlg {
+	@media only screen and (min-width: 75em) {
+		@content;
+	}
+}
+
+@mixin xxlg {
+	@media only screen and (min-width: 90em) {
+		@content;
+	}
+}

@@ -1,0 +1,18 @@
+@use '../utils' as *;
+
+.rd-button {
+	display: inline-block;
+	padding: 0.75em 2.5em;
+	border-radius: 4px;
+	color: $white;
+	background-color: $blue-400;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.25rem;
+	font-weight: $font-weight-bold;
+
+	&:hover,
+	&:focus {
+		background-color: $gray-700;
+	}
+}

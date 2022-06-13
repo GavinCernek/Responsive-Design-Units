@@ -2,9 +2,12 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import debounce from 'lodash.debounce';
 import FontSlider from './FontSlider';
+import SunSVG from './svg/SunSVG';
+import MoonSVG from './svg/MoonSVG';
 
 const Header = () => {
 	const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
+	const [isDarkMode, setIsDarkMode] = useState(false);
 	const headerRef = useRef(null);
 
 	const headerScrolled = () => {
@@ -38,6 +41,20 @@ const Header = () => {
 			<div className="rd-header__slider">
 				<FontSlider />
 			</div>
+			<button
+				type="button"
+				className={
+					isDarkMode === false ? 'rd-header__switch' : 'rd-header__switch rd-header__switch--dark'
+				}
+				onClick={() => setIsDarkMode(!isDarkMode)}
+			>
+				<span>
+					<SunSVG />
+				</span>
+				<span>
+					<MoonSVG />
+				</span>
+			</button>
 		</header>
 	);
 };

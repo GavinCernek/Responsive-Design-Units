@@ -1,0 +1,52 @@
+@use '../utils' as *;
+
+.rd-font-slider {
+	display: flex;
+	align-items: center;
+}
+
+.rd-font-slider__size {
+	flex-shrink: 0;
+	margin-right: 16px;
+}
+
+.rd-font-slider__slider {
+	width: 275px;
+	height: 8px;
+
+	@include md {
+		width: 325px;
+	}
+}
+
+.rd-font-slider__track {
+	top: 0;
+	bottom: 0;
+	background-color: $gray-200;
+	border-radius: 20px;
+}
+
+.rd-font-slider__track-0 {
+	background-color: $blue-400;
+}
+
+.rd-font-slider__thumb {
+	display: block;
+	top: 50%;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	color: transparent;
+	background-color: $gray-100;
+	border-radius: 50%;
+	outline: none;
+	transform: translateY(-50%);
+	transition: background-color 150ms ease-in-out;
+	cursor: grab;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $blue-400;
+	}
+}

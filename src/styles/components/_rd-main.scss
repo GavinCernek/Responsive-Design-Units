@@ -1,0 +1,7 @@
+@use '../utils' as *;
+
+.rd-main {
+	@include lg {
+		display: flex;
+	}
+}

@@ -1,0 +1,66 @@
+@use '../utils' as *;
+
+@mixin RDAccordionExpandedStyle {
+	.rd-accordion--expanded > & {
+		@content;
+	}
+}
+
+.rd-accordion {
+	margin: 10px 0;
+}
+
+.rd-accordion__header {
+	position: relative;
+	padding: 10px;
+	transition: color 150ms ease-in-out;
+
+	&:hover,
+	&:focus-within {
+		color: $blue-400;
+		.rd-accordion__button {
+			color: $blue-400;
+		}
+	}
+
+	@include RDAccordionExpandedStyle {
+		.rd-accordion__button {
+			.rd-icon {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+.rd-accordion__button {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	color: $gray-700;
+	background-color: transparent;
+	border: 1px solid $gray-300;
+	border-radius: 5px;
+
+	.rd-icon {
+		margin-right: 10px;
+		width: 32px;
+		height: 32px;
+		transition: transform 150ms ease-in-out;
+	}
+}
+
+.rd-accordion__body {
+	display: none;
+
+	@include RDAccordionExpandedStyle {
+		display: block;
+		margin-top: 20px;
+		padding: 0 10px;
+	}
+}

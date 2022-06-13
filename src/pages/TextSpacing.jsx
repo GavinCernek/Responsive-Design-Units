@@ -1,6 +1,8 @@
+import Accordion from '../components/Accordion';
+
 const TextSpacing = () => {
 	return (
-		<div className="rd-text-spacing">
+		<article className="rd-text-spacing">
 			<div className="rd-container">
 				<h1>Text Spacing</h1>
 				<p>Let's start off with something basic, but important.</p>
@@ -13,66 +15,95 @@ const TextSpacing = () => {
 					This demo aims to help answer that question by showing how spaced out text is effected
 					from both a horizontal and vertical perspective.
 				</p>
-				<h2>Horizontal Margins (32px, 2em, 2rem)</h2>
-				<h3>px</h3>
-				<div className="rd-row">
-					<p>Paragraph One</p>
-					<p>Paragraph Two</p>
-					<p>Paragraph Three</p>
-					<p>Paragraph Four</p>
-					<p>Paragraph Five</p>
-				</div>
-				<h3>ems</h3>
-				<div className="rd-em-wrapper__outer">
-					<div className="rd-em-wrapper__inner">
-						<div className="rd-row rd-row--ems">
+				<Accordion title={<h2>Horizontal Margins (16px, 1em, 1rem, 5%)</h2>}>
+					<Accordion title={<h3>px</h3>}>
+						<div className="rd-row">
 							<p>Paragraph One</p>
 							<p>Paragraph Two</p>
 							<p>Paragraph Three</p>
 							<p>Paragraph Four</p>
 							<p>Paragraph Five</p>
 						</div>
-					</div>
-				</div>
-				<h3>rems</h3>
-				<div className="rd-row rd-row--rems">
-					<p>Paragraph One</p>
-					<p>Paragraph Two</p>
-					<p>Paragraph Three</p>
-					<p>Paragraph Four</p>
-					<p>Paragraph Five</p>
-				</div>
-				<h2>Vertical Margins (32px, 2em, 2rem)</h2>
-				<h3>px</h3>
-				<div className="rd-col">
-					<p>Paragraph One</p>
-					<p>Paragraph Two</p>
-					<p>Paragraph Three</p>
-					<p>Paragraph Four</p>
-					<p>Paragraph Five</p>
-				</div>
-				<h3>ems</h3>
-				<div className="rd-em-wrapper__outer">
-					<div className="rd-em-wrapper__inner">
-						<div className="rd-col rd-col--ems">
+					</Accordion>
+
+					<Accordion title={<h3>ems</h3>}>
+						<div className="rd-em-wrapper__outer">
+							<div className="rd-em-wrapper__inner">
+								<div className="rd-row rd-row--ems">
+									<p>Paragraph One</p>
+									<p>Paragraph Two</p>
+									<p>Paragraph Three</p>
+									<p>Paragraph Four</p>
+									<p>Paragraph Five</p>
+								</div>
+							</div>
+						</div>
+					</Accordion>
+
+					<Accordion title={<h3>rems</h3>}>
+						<div className="rd-row rd-row--rems">
 							<p>Paragraph One</p>
 							<p>Paragraph Two</p>
 							<p>Paragraph Three</p>
 							<p>Paragraph Four</p>
 							<p>Paragraph Five</p>
 						</div>
-					</div>
-				</div>
-				<h3>rems</h3>
-				<div className="rd-col rd-col--rems">
-					<p>Paragraph One</p>
-					<p>Paragraph Two</p>
-					<p>Paragraph Three</p>
-					<p>Paragraph Four</p>
-					<p>Paragraph Five</p>
-				</div>
+					</Accordion>
+
+					<Accordion title={<h3>%</h3>}>
+						<div className="rd-row rd-row--percent">
+							<p>Paragraph One</p>
+							<p>Paragraph Two</p>
+							<p>Paragraph Three</p>
+							<p>Paragraph Four</p>
+							<p>Paragraph Five</p>
+						</div>
+					</Accordion>
+				</Accordion>
+				<Accordion title={<h2>Vertical Margins (16px, 1em, 1rem, 5%)</h2>}>
+					<Accordion title={<h3>px</h3>}>
+						<div className="rd-col">
+							<p>Paragraph One</p>
+							<p>Paragraph Two</p>
+							<p>Paragraph Three</p>
+							<p>Paragraph Four</p>
+							<p>Paragraph Five</p>
+						</div>
+					</Accordion>
+					<Accordion title={<h3>ems</h3>}>
+						<div className="rd-em-wrapper__outer">
+							<div className="rd-em-wrapper__inner">
+								<div className="rd-col rd-col--ems">
+									<p>Paragraph One</p>
+									<p>Paragraph Two</p>
+									<p>Paragraph Three</p>
+									<p>Paragraph Four</p>
+									<p>Paragraph Five</p>
+								</div>
+							</div>
+						</div>
+					</Accordion>
+					<Accordion title={<h3>rems</h3>}>
+						<div className="rd-col rd-col--rems">
+							<p>Paragraph One</p>
+							<p>Paragraph Two</p>
+							<p>Paragraph Three</p>
+							<p>Paragraph Four</p>
+							<p>Paragraph Five</p>
+						</div>
+					</Accordion>
+					<Accordion title={<h3>%</h3>}>
+						<div className="rd-col rd-col--percent">
+							<p>Paragraph One</p>
+							<p>Paragraph Two</p>
+							<p>Paragraph Three</p>
+							<p>Paragraph Four</p>
+							<p>Paragraph Five</p>
+						</div>
+					</Accordion>
+				</Accordion>
 			</div>
-		</div>
+		</article>
 	);
 };
 
