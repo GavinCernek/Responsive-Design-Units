@@ -20,6 +20,7 @@
 
 	&--hidden {
 		@include lg {
+			flex-basis: 0%;
 			width: auto;
 		}
 	}
@@ -53,7 +54,7 @@
 		transition: transform 300ms ease;
 
 		.rd-header--scrolled ~ .rd-main & {
-			transform: translateY(var(--header-scrolled-min-height));
+			transform: translateY(#{$header-scrolled-min-height * 2});
 		}
 	}
 

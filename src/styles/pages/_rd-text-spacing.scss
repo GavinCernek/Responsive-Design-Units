@@ -1,0 +1,64 @@
+.rd-text-spacing__row {
+	display: flex;
+
+	p {
+		margin: 0 16px;
+	}
+
+	&--em {
+		p {
+			margin: 0 1em;
+		}
+	}
+
+	&--rem {
+		p {
+			margin: 0 1rem;
+		}
+	}
+
+	&--percent {
+		p {
+			margin: 0 2.5%;
+		}
+	}
+
+	&--vw {
+		p {
+			margin: 0 2vw;
+		}
+	}
+}
+
+.rd-col {
+	display: flex;
+	flex-direction: column;
+
+	p {
+		margin: 16px 0;
+	}
+
+	&--em {
+		p {
+			margin: 1em 0;
+		}
+	}
+
+	&--rem {
+		p {
+			margin: 1rem 0;
+		}
+	}
+
+	&--percent {
+		p {
+			margin: 2.5% 0;
+		}
+	}
+
+	&--vw {
+		p {
+			margin: 2vw 0;
+		}
+	}
+}

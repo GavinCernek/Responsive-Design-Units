@@ -72,6 +72,16 @@ const Navigation = () => {
 							Image Sizing
 						</NavLink>
 					</li>
+					<li className="rd-navigation__item">
+						<NavLink
+							to="/svg-sizing"
+							className={({ isActive }) =>
+								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
+							}
+						>
+							SVG Sizing
+						</NavLink>
+					</li>
 				</ul>
 			</nav>
 		</div>

@@ -24,11 +24,9 @@ const Home = () => {
 				</p>
 				<h2>Some Basic Guidelines</h2>
 				<p>
-					Each demo will start off with the example in px values to serve as a baseline visual.
-					Examples that are in em units will have 2 wrappers with their font-size property set to
-					2em and 1.125em respesctively in order to demonstrate the compounding effect they have.
-					All text on the site will be in rem values since they are pretty much regarded as standard
-					practice for accessibility purposes.
+					Each demo will start off with the example in px values to serve as a baseline visual. All
+					text will be in rem values since they are pretty much regarded as standard practice for
+					accessibility purposes.
 				</p>
 				<h2>Other Notes</h2>
 				<p>
@@ -36,7 +34,7 @@ const Home = () => {
 					real answer always depends on your use case and what provides the best UX possible to your
 					end users. Rather, this is simply meant to be a nice and easy way to see patterns in
 					similar common designs with which you can use as a reference while building your own
-					products.
+					projects.
 				</p>
 				<p>And that's it!</p>
 				<Link to="/text-spacing" className="rd-button">
