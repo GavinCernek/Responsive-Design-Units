@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import DownChevronSVG from './svg/DownChevronSVG';
 
 const Accordion = ({ title, children }) => {
 	const [isExpanded, setIsExpanded] = useState(true);
@@ -15,7 +14,9 @@ const Accordion = ({ title, children }) => {
 					onClick={() => setIsExpanded(!isExpanded)}
 				>
 					<span className="rd-visually-hidden">Toggle content</span>
-					<DownChevronSVG />
+					<svg className="rd-icon" aria-hidden={true} focusable={false}>
+						<use xlinkHref="#icon-down-chevron"></use>
+					</svg>
 				</button>
 			</div>
 			<div className="rd-accordion__body">{children}</div>

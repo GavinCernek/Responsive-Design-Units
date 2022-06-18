@@ -8,6 +8,10 @@
 
 .rd-accordion {
 	margin: 10px 0;
+
+	& + & {
+		margin-top: 1em;
+	}
 }
 
 .rd-accordion__header {

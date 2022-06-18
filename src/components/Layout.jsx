@@ -1,6 +1,5 @@
 import Header from './Header';
 import Footer from './Footer';
-import UpArrowSVG from './svg/UpArrowSVG';
 
 const Layout = ({ children }) => {
 	return (
@@ -20,7 +19,9 @@ const Layout = ({ children }) => {
 				>
 					<span className="rd-visually-hidden">Scroll To Top</span>
 					<span>
-						<UpArrowSVG />
+						<svg className="rd-icon" aria-hidden={true} focusable={false}>
+							<use xlinkHref="#icon-up-arrow"></use>
+						</svg>
 					</span>
 				</button>
 			</main>

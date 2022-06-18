@@ -2,8 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import debounce from 'lodash.debounce';
 import FontSlider from './FontSlider';
-import SunSVG from './svg/SunSVG';
-import MoonSVG from './svg/MoonSVG';
 
 const Header = () => {
 	const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
@@ -49,10 +47,14 @@ const Header = () => {
 				onClick={() => setIsDarkMode(!isDarkMode)}
 			>
 				<span>
-					<SunSVG />
+					<svg className="rd-icon" aria-hidden={true} focusable={false}>
+						<use xlinkHref="#icon-sun"></use>
+					</svg>
 				</span>
 				<span>
-					<MoonSVG />
+					<svg className="rd-icon" aria-hidden={true} focusable={false}>
+						<use xlinkHref="#icon-moon"></use>
+					</svg>
 				</span>
 			</button>
 		</header>

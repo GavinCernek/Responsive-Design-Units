@@ -3,14 +3,9 @@
 .rd-content {
 	margin: 2em 0;
 	padding: 0 16px;
-	overflow-x: hidden;
 }
 
 .rd-content {
-	.rd-container > * + * {
-		margin-top: 1em;
-	}
-
 	@include lg {
 		flex: 1;
 	}

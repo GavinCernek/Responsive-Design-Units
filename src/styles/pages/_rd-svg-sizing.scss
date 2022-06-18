@@ -1,0 +1,38 @@
+.rd-svg-sizing__icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	svg {
+		width: 80px;
+		height: 80px;
+	}
+
+	&--em {
+		svg {
+			width: 5em;
+			height: 5em;
+		}
+	}
+
+	&--rem {
+		svg {
+			width: 5rem;
+			height: 5rem;
+		}
+	}
+
+	&--percent {
+		svg {
+			width: 30%;
+			height: 30%;
+		}
+	}
+
+	&--vw {
+		svg {
+			width: 30vw;
+			height: 30vw;
+		}
+	}
+}

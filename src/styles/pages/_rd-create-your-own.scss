@@ -1,0 +1,9 @@
+.rd-create-your-own__editors {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 32px;
+
+	.rd-code-editor {
+		flex: 1;
+	}
+}

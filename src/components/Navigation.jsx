@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import LeftChevronSVG from './svg/LeftChevronSVG';
 
 const navigationHiddenClass = 'rd-navigation--hidden';
 const navigationListHiddenClass = 'rd-navigation__list--hidden';
@@ -48,7 +47,9 @@ const Navigation = () => {
 				>
 					<span className="rd-visually-hidden">Toggle Navigation</span>
 					<span className="rd-navigation__icon-wrapper">
-						<LeftChevronSVG />
+						<svg className="rd-icon" aria-hidden={true} focusable={false}>
+							<use xlinkHref="#icon-left-chevron"></use>
+						</svg>
 					</span>
 				</button>
 				<ul ref={navigationListRef} className="rd-navigation__list">
@@ -80,6 +81,16 @@ const Navigation = () => {
 							}
 						>
 							SVG Sizing
+						</NavLink>
+					</li>
+					<li className="rd-navigation__item">
+						<NavLink
+							to="/create-your-own"
+							className={({ isActive }) =>
+								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
+							}
+						>
+							Create Your Own
 						</NavLink>
 					</li>
 				</ul>

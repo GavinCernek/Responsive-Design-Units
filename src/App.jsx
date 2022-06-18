@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import TextSpacing from './pages/TextSpacing';
 import ImageSizing from './pages/ImageSizing';
 import SVGSizing from './pages/SVGSizing';
+import CreateYourOwn from './pages/CreateYourOwn';
 
 const App = () => {
 	return (
@@ -16,6 +17,7 @@ const App = () => {
 					<Route path="/text-spacing" element={<TextSpacing />} />
 					<Route path="/image-sizing" element={<ImageSizing />} />
 					<Route path="/svg-sizing" element={<SVGSizing />} />
+					<Route path="/create-your-own" element={<CreateYourOwn />} />
 				</Routes>
 			</div>
 		</Layout>

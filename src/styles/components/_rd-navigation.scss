@@ -54,7 +54,7 @@
 		transition: transform 300ms ease;
 
 		.rd-header--scrolled ~ .rd-main & {
-			transform: translateY(#{$header-scrolled-min-height * 2});
+			transform: translateY($header-scrolled-min-height);
 		}
 	}
 
