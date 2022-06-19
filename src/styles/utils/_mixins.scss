@@ -1,0 +1,9 @@
+@mixin DarkMode() {
+	.dark-mode & {
+		@content;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		@content;
+	}
+}

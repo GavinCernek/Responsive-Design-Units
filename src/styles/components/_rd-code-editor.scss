@@ -21,7 +21,14 @@
 	border-radius: 4px;
 	resize: none;
 	font-size: 1rem;
-	transition: 150ms ease-in-out;
+	transition: color 150ms ease-in-out, background-color 150ms ease-in-out,
+		border-color 150ms ease-in-out;
+
+	@include DarkMode {
+		color: $white;
+		background-color: $gray-600;
+		border-color: $white;
+	}
 
 	&:hover,
 	&:focus {

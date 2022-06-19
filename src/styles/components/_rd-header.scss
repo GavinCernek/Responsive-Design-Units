@@ -25,6 +25,15 @@
 	min-height: 70px;
 	background-color: $white;
 	box-shadow: 0 0 4px 1px hsla(0, 0%, 0%, 0.25);
+	transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+
+	@include DarkMode {
+		color: $white;
+		background-color: $gray-700;
+		border-bottom: 1px solid white;
+		backdrop-filter: blur(10px);
+		box-shadow: none;
+	}
 
 	@include md {
 		justify-content: space-between;
@@ -56,6 +65,10 @@
 	text-decoration: none;
 	font-size: 1.125rem;
 	font-weight: $font-weight-bold;
+
+	@include DarkMode {
+		color: $white;
+	}
 
 	&:hover,
 	&:focus {

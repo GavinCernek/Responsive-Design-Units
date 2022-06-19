@@ -1,14 +1,20 @@
 import { useState } from 'react';
 
-const head = document.querySelector('head');
-
 const style = document.createElement('style');
 style.setAttribute('type', 'text/css');
-head.appendChild(style);
+document.head.appendChild(style);
 
 const CreateYourOwn = () => {
 	const [html, setHtml] = useState('');
 	const [css, setCss] = useState('');
+
+	const handleHtmlChange = (e) => {
+		setHtml(e.target.value);
+	};
+
+	const handleCssChange = (e) => {
+		setCss(e.target.value);
+	};
 
 	style.innerHTML = css;
 
@@ -16,7 +22,7 @@ const CreateYourOwn = () => {
 		<article className="rd-create-your-own">
 			<h1>Create Your Own</h1>
 			<p>
-				Use the HTML and CSS editors to add your own markup and styles to see how their layout is
+				Use the HTML and CSS editors to add your own markup and styles to see how the layout is
 				effected!
 			</p>
 			<p>
@@ -30,7 +36,8 @@ const CreateYourOwn = () => {
 					<textarea
 						className="rd-code-editor__textarea"
 						value={html}
-						onChange={(e) => setHtml(e.target.value)}
+						onChange={(e) => handleHtmlChange(e)}
+						spellCheck={false}
 					/>
 				</div>
 				<div className="rd-code-editor">
@@ -38,7 +45,8 @@ const CreateYourOwn = () => {
 					<textarea
 						className="rd-code-editor__textarea"
 						value={css}
-						onChange={(e) => setCss(e.target.value)}
+						onChange={(e) => handleCssChange(e)}
+						spellCheck={false}
 					/>
 				</div>
 			</div>

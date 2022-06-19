@@ -1,6 +1,13 @@
 @use '../utils' as *;
 
 .rd-navigation {
+	transition: background-color 150ms ease-in-out, border-right-color 150ms ease-in-out;
+
+	@include DarkMode {
+		background-color: $gray-700;
+		border-right-color: $white;
+	}
+
 	@include lg {
 		display: flex;
 		position: sticky;
@@ -9,7 +16,8 @@
 		width: 320px;
 		max-height: 100vh;
 		border-right: 1px solid $gray-300;
-		transition: transform 400ms ease;
+		transition: background-color 150ms ease-in-out, border-right-color 150ms ease-in-out,
+			transform 400ms ease;
 	}
 
 	&--collapsed {
@@ -66,6 +74,8 @@
 }
 
 .rd-navigation__item {
+	flex-shrink: 0;
+
 	&:not(:last-child) {
 		margin-right: 8px;
 
@@ -86,6 +96,10 @@
 	border-radius: 5px;
 	text-decoration: none;
 	font-weight: $font-weight-bold;
+
+	@include DarkMode {
+		color: $white;
+	}
 
 	&:hover,
 	&:focus,
@@ -116,6 +130,13 @@
 		border: none;
 		border-radius: 50%;
 		transform: translateY(-50%);
+
+		@include DarkMode {
+			&:hover,
+			&:focus {
+				background-color: $red-500;
+			}
+		}
 
 		&:hover,
 		&:focus {

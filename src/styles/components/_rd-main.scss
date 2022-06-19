@@ -1,6 +1,14 @@
 @use '../utils' as *;
 
 .rd-main {
+	color: $gray-700;
+	transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+
+	@include DarkMode {
+		color: $white;
+		background-color: $gray-700;
+	}
+
 	@include lg {
 		display: flex;
 	}

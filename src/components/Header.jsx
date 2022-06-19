@@ -22,6 +22,17 @@ const Header = () => {
 
 	const debouncedScroll = debounce(headerScrolled, 15);
 
+	const handleTheme = () => {
+		if (isDarkMode) {
+			document.body.className = 'light-mode';
+			setIsDarkMode(false);
+			return;
+		}
+
+		document.body.className = 'dark-mode';
+		setIsDarkMode(true);
+	};
+
 	useEffect(() => {
 		window.addEventListener('scroll', debouncedScroll);
 
@@ -44,7 +55,7 @@ const Header = () => {
 				className={
 					isDarkMode === false ? 'rd-header__switch' : 'rd-header__switch rd-header__switch--dark'
 				}
-				onClick={() => setIsDarkMode(!isDarkMode)}
+				onClick={handleTheme}
 			>
 				<span>
 					<svg className="rd-icon" aria-hidden={true} focusable={false}>
