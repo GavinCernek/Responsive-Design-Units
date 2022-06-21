@@ -85,6 +85,14 @@
 		}
 	}
 
+	&:last-child {
+		padding-right: 16px;
+
+		@include lg {
+			padding-right: 0;
+		}
+	}
+
 	@include lg {
 		width: 100%;
 	}
@@ -101,9 +109,9 @@
 		color: $white;
 	}
 
+	&--active,
 	&:hover,
-	&:focus,
-	&:active {
+	&:focus {
 		color: $white;
 		background-color: $blue-400;
 	}

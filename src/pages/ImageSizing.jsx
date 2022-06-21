@@ -21,12 +21,12 @@ const ImageSizing = () => {
 					<img src={imageSizingSrc} alt="" />
 				</div>
 			</Accordion>
-			<Accordion title={<h2>% (50% x 50%)</h2>}>
+			<Accordion title={<h2>% (30% x 30%)</h2>}>
 				<div className="rd-image-sizing__asset rd-image-sizing__asset--percent">
 					<img src={imageSizingSrc} alt="" />
 				</div>
 			</Accordion>
-			<Accordion title={<h2>vw (50vw x 50vw)</h2>}>
+			<Accordion title={<h2>vw (30vw x 30vw)</h2>}>
 				<div className="rd-image-sizing__asset rd-image-sizing__asset--vw">
 					<img src={imageSizingSrc} alt="" />
 				</div>

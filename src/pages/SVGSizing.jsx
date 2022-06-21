@@ -25,14 +25,14 @@ const SVGSizing = () => {
 					</svg>
 				</div>
 			</Accordion>
-			<Accordion title={<h2>% (50% x 50%)</h2>}>
+			<Accordion title={<h2>% (5% x 5%)</h2>}>
 				<div className="rd-svg-sizing__icon rd-svg-sizing__icon--percent">
 					<svg className="rd-icon" aria-hidden={true} focusable={false}>
 						<use xlinkHref="#icon-css"></use>
 					</svg>
 				</div>
 			</Accordion>
-			<Accordion title={<h2>vw (50vw x 50vw)</h2>}>
+			<Accordion title={<h2>vw (5vw x 5vw)</h2>}>
 				<div className="rd-svg-sizing__icon rd-svg-sizing__icon--vw">
 					<svg className="rd-icon" aria-hidden={true} focusable={false}>
 						<use xlinkHref="#icon-css"></use>

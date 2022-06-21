@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { usePreferedTheme } from './hooks/usePreferedTheme';
+import { getUserPreferedTheme } from './utils/getUserPreferedTheme';
 import Layout from './components/Layout';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
@@ -11,7 +11,7 @@ import CreateYourOwn from './pages/CreateYourOwn';
 const root = document.querySelector('html');
 
 const App = () => {
-	root.className = usePreferedTheme();
+	root.className = getUserPreferedTheme();
 
 	return (
 		<Layout>

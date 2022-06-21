@@ -52,6 +52,18 @@
 	}
 }
 
+.rd-header__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	width: 100%;
+
+	@include RDHeaderScrolledStyle {
+		display: none;
+	}
+}
+
 .rd-header__title {
 	@include md {
 		margin-bottom: 0;
@@ -92,6 +104,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-shrink: 0;
 	position: relative;
 	padding: 4px;
 	width: $theme-toggle-button-width;

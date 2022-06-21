@@ -24,7 +24,7 @@ const TextSpacing = () => {
 						<p>Paragraph Five</p>
 					</div>
 				</Accordion>
-				<Accordion title={<h3>ems</h3>}>
+				<Accordion title={<h3>em</h3>}>
 					<div className="rd-text-spacing__row rd-text-spacing__row--em">
 						<p>Paragraph One</p>
 						<p>Paragraph Two</p>
@@ -33,7 +33,7 @@ const TextSpacing = () => {
 						<p>Paragraph Five</p>
 					</div>
 				</Accordion>
-				<Accordion title={<h3>rems</h3>}>
+				<Accordion title={<h3>rem</h3>}>
 					<div className="rd-text-spacing__row rd-text-spacing__row--rem">
 						<p>Paragraph One</p>
 						<p>Paragraph Two</p>
@@ -71,7 +71,7 @@ const TextSpacing = () => {
 						<p>Paragraph Five</p>
 					</div>
 				</Accordion>
-				<Accordion title={<h3>ems</h3>}>
+				<Accordion title={<h3>em</h3>}>
 					<div className="rd-text-spacing__col rd-text-spacing__col--em">
 						<p>Paragraph One</p>
 						<p>Paragraph Two</p>
@@ -80,7 +80,7 @@ const TextSpacing = () => {
 						<p>Paragraph Five</p>
 					</div>
 				</Accordion>
-				<Accordion title={<h3>rems</h3>}>
+				<Accordion title={<h3>rem</h3>}>
 					<div className="rd-text-spacing__col rd-text-spacing__col--rem">
 						<p>Paragraph One</p>
 						<p>Paragraph Two</p>

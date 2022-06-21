@@ -1,4 +1,4 @@
-export const usePreferedTheme = () => {
+export const getUserPreferedTheme = () => {
 	const preferedTheme = localStorage.getItem('theme-preference');
 	const mql = window.matchMedia('(prefers-color-scheme: dark)');
 
