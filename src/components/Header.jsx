@@ -1,11 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import debounce from 'lodash.debounce';
+import { usePreferedTheme } from '../hooks/usePreferedTheme';
 import FontSlider from './FontSlider';
+
+const root = document.querySelector('html');
 
 const Header = () => {
 	const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
-	const [isDarkMode, setIsDarkMode] = useState(false);
+	const [isDarkMode, setIsDarkMode] = useState(usePreferedTheme() === 'dark-mode' ? true : false);
 	const headerRef = useRef(null);
 
 	const headerScrolled = () => {
@@ -24,12 +27,14 @@ const Header = () => {
 
 	const handleTheme = () => {
 		if (isDarkMode) {
-			document.body.className = 'light-mode';
+			root.className = 'light-mode';
+			localStorage.setItem('theme-preference', 'light-mode');
 			setIsDarkMode(false);
 			return;
 		}
 
-		document.body.className = 'dark-mode';
+		root.className = 'dark-mode';
+		localStorage.setItem('theme-preference', 'dark-mode');
 		setIsDarkMode(true);
 	};
 
@@ -57,12 +62,13 @@ const Header = () => {
 				}
 				onClick={handleTheme}
 			>
-				<span>
+				<span className="rd-visually-hidden">Toggle Theme</span>
+				<span className="rd-header__switch-icon">
 					<svg className="rd-icon" aria-hidden={true} focusable={false}>
 						<use xlinkHref="#icon-sun"></use>
 					</svg>
 				</span>
-				<span>
+				<span className="rd-header__switch-icon">
 					<svg className="rd-icon" aria-hidden={true} focusable={false}>
 						<use xlinkHref="#icon-moon"></use>
 					</svg>

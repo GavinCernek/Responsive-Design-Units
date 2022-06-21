@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { usePreferedTheme } from './hooks/usePreferedTheme';
 import Layout from './components/Layout';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
@@ -7,7 +8,11 @@ import ImageSizing from './pages/ImageSizing';
 import SVGSizing from './pages/SVGSizing';
 import CreateYourOwn from './pages/CreateYourOwn';
 
+const root = document.querySelector('html');
+
 const App = () => {
+	root.className = usePreferedTheme();
+
 	return (
 		<Layout>
 			<Navigation />
