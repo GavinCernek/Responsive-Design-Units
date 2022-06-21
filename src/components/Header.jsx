@@ -62,7 +62,7 @@ const Header = () => {
 				}
 				onClick={handleTheme}
 			>
-				<span className="rd-visually-hidden">Toggle Theme</span>
+				<span className="rd-visually-hidden">Switch Between Light and Dark Mode</span>
 				<span className="rd-header__switch-icon">
 					<svg className="rd-icon" aria-hidden={true} focusable={false}>
 						<use xlinkHref="#icon-sun"></use>
