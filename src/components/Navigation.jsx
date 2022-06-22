@@ -85,6 +85,26 @@ const Navigation = () => {
 					</li>
 					<li className="rd-navigation__item">
 						<NavLink
+							to="/borders"
+							className={({ isActive }) =>
+								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
+							}
+						>
+							Borders
+						</NavLink>
+					</li>
+					<li className="rd-navigation__item">
+						<NavLink
+							to="/containers"
+							className={({ isActive }) =>
+								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
+							}
+						>
+							Containers
+						</NavLink>
+					</li>
+					<li className="rd-navigation__item">
+						<NavLink
 							to="/create-your-own"
 							className={({ isActive }) =>
 								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'

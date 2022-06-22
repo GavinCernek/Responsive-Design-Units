@@ -22,10 +22,6 @@
 	&:hover,
 	&:focus-within {
 		color: $blue-400;
-
-		.rd-accordion__button {
-			color: $blue-400;
-		}
 	}
 
 	@include RDAccordionExpandedStyle {
@@ -37,10 +33,22 @@
 	}
 }
 
-.rd-accordion__button {
+.rd-accordion__title {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: center;
+
+	.rd-icon {
+		flex-shrink: 0;
+		margin-left: 5px;
+		width: 32px;
+		height: 32px;
+		transition: transform 150ms ease-in-out;
+	}
+}
+
+.rd-accordion__button {
+	display: block;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -54,13 +62,6 @@
 
 	@include DarkMode {
 		color: $white;
-	}
-
-	.rd-icon {
-		margin-right: 10px;
-		width: 32px;
-		height: 32px;
-		transition: transform 150ms ease-in-out;
 	}
 }
 

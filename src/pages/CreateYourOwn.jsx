@@ -8,14 +8,6 @@ const CreateYourOwn = () => {
 	const [html, setHtml] = useState('');
 	const [css, setCss] = useState('');
 
-	const handleHtmlChange = (e) => {
-		setHtml(e.target.value);
-	};
-
-	const handleCssChange = (e) => {
-		setCss(e.target.value);
-	};
-
 	style.innerHTML = css;
 
 	return (
@@ -36,7 +28,7 @@ const CreateYourOwn = () => {
 					<textarea
 						className="rd-code-editor__textarea"
 						value={html}
-						onChange={(e) => handleHtmlChange(e)}
+						onChange={(e) => setHtml(e.target.value)}
 						spellCheck={false}
 					/>
 				</div>
@@ -45,12 +37,12 @@ const CreateYourOwn = () => {
 					<textarea
 						className="rd-code-editor__textarea"
 						value={css}
-						onChange={(e) => handleCssChange(e)}
+						onChange={(e) => setCss(e.target.value)}
 						spellCheck={false}
 					/>
 				</div>
 			</div>
-			<div className="rd-create-your-own__output" dangerouslySetInnerHTML={{ __html: html }} />
+			<div dangerouslySetInnerHTML={{ __html: html }} />
 		</article>
 	);
 };

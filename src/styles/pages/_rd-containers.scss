@@ -1,0 +1,52 @@
+@use '../utils' as *;
+
+.rd-containers__container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 200px;
+
+	@include md {
+		max-width: 300px;
+	}
+
+	@include lg {
+		max-width: 400px;
+	}
+
+	&--em {
+		max-width: 12.5em;
+
+		@include md {
+			max-width: 18.75em;
+		}
+
+		@include lg {
+			max-width: 25em;
+		}
+	}
+
+	&--rem {
+		max-width: 12.5rem;
+
+		@include md {
+			max-width: 18.75rem;
+		}
+
+		@include lg {
+			max-width: 25rem;
+		}
+	}
+
+	&--percent {
+		max-width: 50%;
+	}
+
+	&--vw {
+		max-width: 50vw;
+	}
+}
+
+.rd-containers__text {
+	text-align: center;
+}

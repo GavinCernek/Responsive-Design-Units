@@ -26,13 +26,18 @@
 	background-color: $white;
 	box-shadow: 0 0 4px 1px hsla(0, 0%, 0%, 0.25);
 	transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+	z-index: 6000;
 
 	@include DarkMode {
 		color: $white;
 		background-color: $gray-700;
 		border-bottom: 1px solid white;
-		backdrop-filter: blur(10px);
 		box-shadow: none;
+
+		@supports (backdrop-filter: blur()) {
+			background-color: hsla(0, 0%, 20%, 0.7);
+			backdrop-filter: blur(10px);
+		}
 	}
 
 	@include md {

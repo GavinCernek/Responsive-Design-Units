@@ -38,6 +38,11 @@
 	@include lg {
 		display: flex;
 		width: 100%;
+		overflow-y: auto;
+
+		.rd-header--scrolled ~ .rd-main & {
+			padding-top: 3.25rem;
+		}
 	}
 }
 
@@ -47,29 +52,29 @@
 	margin: 0;
 	padding: 0 16px;
 	min-height: 55px;
+	background-color: $white;
 	border-bottom: 1px solid $gray-300;
 	list-style-type: none;
 	overflow-x: auto;
 
 	@include lg {
-		padding-top: 32px;
+		padding-top: 16px;
 		width: 100%;
 		align-items: flex-start;
 		flex-direction: column;
 		border-bottom: none;
-		overflow-x: hidden;
-		overflow-y: auto;
+		overflow-x: visible;
 		transition: transform 300ms ease;
-
-		.rd-header--scrolled ~ .rd-main & {
-			transform: translateY($header-scrolled-min-height);
-		}
 	}
 
 	&--hidden {
 		@include lg {
 			visibility: hidden;
 		}
+	}
+
+	@include DarkMode {
+		background-color: $gray-700;
 	}
 }
 

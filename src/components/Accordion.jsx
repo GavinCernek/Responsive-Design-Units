@@ -6,7 +6,12 @@ const Accordion = ({ title, children }) => {
 	return (
 		<div className={isExpanded ? 'rd-accordion rd-accordion--expanded' : 'rd-accordion'}>
 			<div className="rd-accordion__header">
-				{title}
+				<div className="rd-accordion__title">
+					{title}
+					<svg className="rd-icon" aria-hidden={true} focusable={false}>
+						<use xlinkHref="#icon-down-chevron"></use>
+					</svg>
+				</div>
 				<button
 					type="button"
 					className="rd-accordion__button"
@@ -14,9 +19,6 @@ const Accordion = ({ title, children }) => {
 					onClick={() => setIsExpanded(!isExpanded)}
 				>
 					<span className="rd-visually-hidden">Toggle content</span>
-					<svg className="rd-icon" aria-hidden={true} focusable={false}>
-						<use xlinkHref="#icon-down-chevron"></use>
-					</svg>
 				</button>
 			</div>
 			<div className="rd-accordion__body">{children}</div>

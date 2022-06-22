@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import TextSpacing from './pages/TextSpacing';
 import ImageSizing from './pages/ImageSizing';
 import SVGSizing from './pages/SVGSizing';
+import Borders from './pages/Borders';
+import Containers from './pages/Containers';
 import CreateYourOwn from './pages/CreateYourOwn';
 
 const root = document.querySelector('html');
@@ -22,6 +24,8 @@ const App = () => {
 					<Route path="/text-spacing" element={<TextSpacing />} />
 					<Route path="/image-sizing" element={<ImageSizing />} />
 					<Route path="/svg-sizing" element={<SVGSizing />} />
+					<Route path="/borders" element={<Borders />} />
+					<Route path="/containers" element={<Containers />} />
 					<Route path="/create-your-own" element={<CreateYourOwn />} />
 				</Routes>
 			</div>

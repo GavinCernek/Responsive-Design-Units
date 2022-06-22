@@ -1,0 +1,19 @@
+@use '../utils' as *;
+
+.rd-borders__box {
+	padding: 10px;
+	border: 2px solid $blue-400;
+	border-radius: 4px;
+
+	&--em {
+		border-width: 0.125em;
+	}
+
+	&--rem {
+		border-width: 0.125rem;
+	}
+
+	&--vw {
+		border-width: 2vw;
+	}
+}
