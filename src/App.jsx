@@ -9,6 +9,7 @@ import SVGSizing from './pages/SVGSizing';
 import Borders from './pages/Borders';
 import Containers from './pages/Containers';
 import CreateYourOwn from './pages/CreateYourOwn';
+import NotFound from './pages/NotFound';
 
 const root = document.querySelector('html');
 
@@ -27,6 +28,7 @@ const App = () => {
 					<Route path="/borders" element={<Borders />} />
 					<Route path="/containers" element={<Containers />} />
 					<Route path="/create-your-own" element={<CreateYourOwn />} />
+					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</div>
 		</Layout>
