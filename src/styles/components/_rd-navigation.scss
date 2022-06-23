@@ -29,7 +29,7 @@
 	&--hidden {
 		@include lg {
 			flex-basis: 0%;
-			width: auto;
+			width: 0;
 		}
 	}
 }

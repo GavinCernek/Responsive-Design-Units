@@ -4,35 +4,39 @@
 	align-items: center;
 
 	svg {
-		width: 80px;
-		height: 80px;
+		width: 32px;
+		height: 32px;
 	}
 
 	&--em {
 		svg {
-			width: 5em;
-			height: 5em;
+			width: 2em;
+			height: 2em;
 		}
 	}
 
 	&--rem {
 		svg {
-			width: 5rem;
-			height: 5rem;
+			width: 2rem;
+			height: 2rem;
 		}
 	}
 
 	&--percent {
 		svg {
-			width: 5%;
-			height: 5%;
+			width: 2%;
+			height: 2%;
 		}
 	}
 
 	&--vw {
 		svg {
-			width: 5vw;
-			height: 5vw;
+			width: 2vw;
+			height: 2vw;
 		}
 	}
+}
+
+.rd-svg-sizing__text {
+	font-size: 1rem;
 }

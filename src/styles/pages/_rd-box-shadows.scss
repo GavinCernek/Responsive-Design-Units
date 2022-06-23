@@ -1,0 +1,16 @@
+.rd-box-shadows__box {
+	padding: 10px;
+	box-shadow: 0 0 2px 2px hsla(0%, 0%, 0%, 0.45);
+
+	&--em {
+		box-shadow: 0 0 0.125em 0.125em hsla(0%, 0%, 0%, 0.45);
+	}
+
+	&--rem {
+		box-shadow: 0 0 0.125rem 0.125rem hsla(0%, 0%, 0%, 0.45);
+	}
+
+	&--vw {
+		box-shadow: 0 0 2vw 2vw hsla(0%, 0%, 0%, 0.45);
+	}
+}

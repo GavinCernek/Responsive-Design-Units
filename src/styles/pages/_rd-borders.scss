@@ -1,9 +1,8 @@
 @use '../utils' as *;
 
-.rd-borders__box {
+.rd-borders__box-width {
 	padding: 10px;
 	border: 2px solid $blue-400;
-	border-radius: 4px;
 
 	&--em {
 		border-width: 0.125em;
@@ -15,5 +14,23 @@
 
 	&--vw {
 		border-width: 2vw;
+	}
+}
+
+.rd-borders__box-radius {
+	padding: 10px;
+	border: 2px solid $blue-400;
+	border-radius: 4px;
+
+	&--em {
+		border-radius: 0.25em;
+	}
+
+	&--rem {
+		border-radius: 0.25rem;
+	}
+
+	&--vw {
+		border-radius: 4vw;
 	}
 }

@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Home = () => {
 	return (
 		<article className="rd-home">
+			<SEO
+				title="Home"
+				description="Responsive Design Units aims to provide interactive demos for frontend developers to test responsive CSS units."
+			/>
+
 			<h1>Welcome to Responsive Design Units!</h1>
 			<h2>Purpose</h2>
 			<p>

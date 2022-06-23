@@ -1,8 +1,11 @@
+import SEO from '../components/SEO';
 import Accordion from '../components/Accordion';
 
 const Containers = () => {
 	return (
 		<article className="rd-containers">
+			<SEO title="Containers" description="See how containers scale when the font is changed." />
+
 			<h1>Containers</h1>
 			<Accordion title={<h2>px (200px, 300px, 400px)</h2>}>
 				<div className="rd-containers__container">

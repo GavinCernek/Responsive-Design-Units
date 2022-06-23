@@ -1,0 +1,110 @@
+@use '../utils' as *;
+
+@mixin ProductCardModifierStyle($modifier) {
+	.rd-products-card__card--#{$modifier} & {
+		@content;
+	}
+}
+
+.rd-products-card__card {
+	margin: 0 auto;
+	max-width: 300px;
+	border: 2px solid $blue-400;
+	border-radius: 4px;
+
+	&--em {
+		max-width: 18.75em;
+		border-width: 0.125em;
+	}
+
+	&--rem {
+		max-width: 18.75rem;
+		border-width: 0.125rem;
+	}
+}
+
+.rd-products-card__image {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: 250px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	object-fit: cover;
+
+	@include ProductCardModifierStyle(em) {
+		height: 15.625em;
+	}
+
+	@include ProductCardModifierStyle(rem) {
+		height: 15.625rem;
+	}
+}
+
+.rd-products-card__content {
+	padding: 10px;
+
+	@include ProductCardModifierStyle(em) {
+		padding: 0.625em;
+	}
+
+	@include ProductCardModifierStyle(rem) {
+		padding: 0.625rem;
+	}
+}
+
+.rd-products-card__title {
+	margin: 0 0 5px;
+
+	@include ProductCardModifierStyle(em) {
+		margin: 0 0 0.313em;
+	}
+
+	@include ProductCardModifierStyle(rem) {
+		margin: 0 0 0.313rem;
+	}
+}
+
+.rd-products-card__description {
+	margin: 0 0 15px;
+
+	@include ProductCardModifierStyle(em) {
+		margin: 0 0 0.938em;
+	}
+
+	@include ProductCardModifierStyle(rem) {
+		margin: 0 0 0.938rem;
+	}
+}
+
+.rd-products-card__price {
+	margin: 0 0 20px;
+	font-size: 2rem;
+	font-weight: $font-weight-bold;
+
+	@include ProductCardModifierStyle(em) {
+		margin: 0 0 1.25em;
+	}
+
+	@include ProductCardModifierStyle(rem) {
+		margin: 0 0 1.25rem;
+	}
+}
+
+.rd-products-card__cart {
+	margin: 0;
+	padding: 12px;
+	color: $white;
+	background-color: $blue-400;
+	border-radius: 4px;
+	text-align: center;
+	font-weight: $font-weight-bold;
+
+	@include ProductCardModifierStyle(em) {
+		padding: 0.75em;
+	}
+
+	@include ProductCardModifierStyle(rem) {
+		padding: 0.75rem;
+	}
+}

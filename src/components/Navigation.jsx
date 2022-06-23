@@ -105,6 +105,26 @@ const Navigation = () => {
 					</li>
 					<li className="rd-navigation__item">
 						<NavLink
+							to="/box-shadows"
+							className={({ isActive }) =>
+								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
+							}
+						>
+							Box Shadows
+						</NavLink>
+					</li>
+					<li className="rd-navigation__item">
+						<NavLink
+							to="/product-card"
+							className={({ isActive }) =>
+								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'
+							}
+						>
+							Product Card
+						</NavLink>
+					</li>
+					<li className="rd-navigation__item">
+						<NavLink
 							to="/create-your-own"
 							className={({ isActive }) =>
 								isActive ? 'rd-navigation__link rd-navigation__link--active' : 'rd-navigation__link'

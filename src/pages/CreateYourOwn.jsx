@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SEO from '../components/SEO';
 
 const style = document.createElement('style');
 style.setAttribute('type', 'text/css');
@@ -12,6 +13,11 @@ const CreateYourOwn = () => {
 
 	return (
 		<article className="rd-create-your-own">
+			<SEO
+				title="Create Your Own"
+				description="Create your own HTML and CSS demo and use the font slider to test how it scales responsively!"
+			/>
+
 			<h1>Create Your Own</h1>
 			<p>
 				Use the HTML and CSS editors to add your own markup and styles to see how the layout is
